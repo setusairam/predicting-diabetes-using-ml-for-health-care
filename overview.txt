@@ -1,0 +1,19 @@
+this project is about predicting diabetes by some factors :
+
+Pregnancies
+Glucose
+Blood Pressure	
+Skin Thickness	
+Insulin	
+BMI	
+Diabetes Pedigree Function
+Age
+
+
+we have used random forest and logistic regression algorithms to predict the diabetes.
+both of the algorithms given 85% accuracy.
+
+this is a website that predicts the diabetes and also give the food to eat and food not to eat and also the medications to take if you have diabetes.
+
+and it will give some information on diabetes and also some articles on diabetes.
+this website prevents the new people getting diabetes.

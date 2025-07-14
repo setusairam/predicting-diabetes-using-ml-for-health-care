@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="static/index.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#recommended-food">Recommended Foods</a></li>
+                <li><a href="#foods-to-avoid">Foods to Avoid</a></li>
+                <li><a href="#about-diabetes">About Diabetes</a></li>
+                <li><a href="#medication">Medication</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to Diabetes Prediction</h1>
+        <p>This project helps you predict diabetes risk using machine learning techniques.</p>
+        <p>Learn more about diabetes, and foods that are good or bad for diabetes patients.</p>
+        <a href="{{ url_for('predictor') }}"><button>Go to Predictor</button></a>
+    </section>
+
+    <!-- Recommended Foods Section -->
+    <section id="recommended-food">
+        <h2>Foods for Diabetes Patients</h2>
+        <p>Here are the recommended foods to include in your diet.</p>
+        <div class="main-content">
+            <!-- Food Items -->
+            <div class="column">
+                <img src="https://healthwire.pk/wp-content/uploads/2022/08/green-leafy-vegetables.jpg" alt="Leafy Greens">
+                <p>Leafy Greens</p>
+            </div>
+            <div class="column">
+                <img src="https://images.prismic.io/thriva/47074b77-0596-4977-833c-97e4047cedaa_Wholegrain+foods.jpg?auto=compress,format" alt="Whole Grains">
+                <p>Whole Grains</p>
+            </div>
+
+            <div class="column">
+                <img src="https://cdn-prod.medicalnewstoday.com/content/images/articles/323/323169/greek-yoghurt-in-bowl.jpg" alt="Lean Proteins">
+                <p>Greek Yogurt</p>
+            </div>
+            <div class="column">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Cottagecheese200px.jpg/800px-Cottagecheese200px.jpg" alt="Lean Proteins">
+                <p>Cheese</p>
+            </div>
+            <div class="column">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDTbFoz8U5IKKDd2KBg2uOcOnJRm1-Zdm9NQ&s" alt="Lean Proteins">
+                <p>Milk</p>
+            </div>
+            <div class="column">
+                <img src="https://www.scoular.com/wp-content/uploads/2020/10/dark-hilum-soybeans2_27952870.jpg" alt="Lean Proteins">
+                <p>Soy Beans</p>
+            </div>
+
+            <div class="column">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWM4v-M7vN7rLCOBpyWEip9F8dTmsOLB5X7i4nw6LRwxcWpI23eQ&s" alt="Lean Proteins">
+                <p>Egg</p>
+            </div>
+
+            <div class="column">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCE5zEHgS5EHByRD2iAzahPuY1uO9j8wyCCg&s" alt="Lean Proteins">
+                <p>Fish</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Foods to Avoid Section -->
+    <section id="foods-to-avoid">
+        <h2>Foods to Avoid</h2>
+        <p>Foods that diabetes patients should avoid based on their condition.</p>
+        <div class="main-content">
+            <!-- Food Items to Avoid -->
+            <div class="column">
+                <img src="https://media.istockphoto.com/id/1137312508/photo/assortment-of-products-with-high-sugar-level.jpg?s=612x612&w=0&k=20&c=pfMfQfo4pHnTfESlJCSB_wCrOvlHhtZ3Eqdu3CY5LDY=" alt="Sugary Snacks">
+                <p>Sugary Snacks</p>
+            </div>
+            <div class="column">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZOvckH7S5NEUIPaMlD1MkSfT9K_h9k5AAcw&s" alt="Sugary Snacks">
+                <p>Sweets</p>
+            </div>
+            <div class="column">
+                <img src="https://i.pinimg.com/736x/c4/ee/15/c4ee15bc22fa3a63fce34fd4017026e4.jpg" alt="Sugary Snacks">
+                <p>Soft Drinks</p>
+            </div>
+            <div class="column">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHDDX1nDLBBe7EQDD2q-VPgB7UeBtOIEiwGw&s" alt="Sugary Snacks">
+                <p>Fried Food</p>
+            </div>
+            <div class="column">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS11nqp4GPjEm60f_jkHRBT2H_V-uq6svpiwg&s" alt="Sugary Snacks">
+                <p>Processed Sugars</p>
+            </div>
+            <div class="column">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1tMH2OA8f1w_0mjmoSbi4Hb6r8c46bLcvFQ&s" alt="Sugary Snacks">
+                <p>Pastries</p>
+            </div>
+            <div class="column">
+                <img src="https://static01.nyt.com/images/2023/10/27/multimedia/27cakerex-plzm/27cakerex-plzm-superJumbo.jpg" alt="Refined Carbs">
+                <p>Cakes</p>
+            </div>
+            <div class="column">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOXxGVaKZJFQ-rLrZ8DNfdzhCfhXI_-qYZjQ&s" alt="Processed Foods">
+                <p>Refined Carbs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Diabetes Section with Blog Cards -->
+    <section id="about-diabetes">
+        <h2>About Diabetes</h2>
+        <p>Explore articles on diabetes, its causes, and management strategies.</p>
+        <div class="blog-cards">
+            <!-- Single Blog Card -->
+            <div class="blog-card">
+                <img src="https://mdrf.in/images/index_banner_new3.png" alt="Diabetes Introduction">
+                <h3>Madras Diabetes Research Foundation</h3>
+                <p>The personal, social and economic costs of diabetes are huge and are likely to adversely affect India's economic development over the next couple of decades.</p>
+                <a href="https://mdrf.in/" target="_blank">Read More</a>
+            </div>
+            <div class="blog-card">
+                <img src="https://www.niddk.nih.gov/-/media/Images/Blog/2024-Blog-Post-Images/DDP-Blog-Post-Health-Literacy_Sitecore---600x350.png" alt="Lifestyle Tips">
+                <h3>National Institute of Health (NIH)</h3>
+                <p>Blogs on Diabetes</p>
+                <a href="https://www.niddk.nih.gov/health-information/professionals/diabetes-discoveries-practice" target="_blank">Read More</a>
+            </div>
+            <div class="blog-card">
+                <img src="https://d35oenyzp35321.cloudfront.net/Vegan_Diet_22cd056a6e.jpg" alt="Diabetes Nutrition">
+                <h3>MAX Health Care</h3>
+                <p>Empowering Health: A Guide to Managing Diabetes Through Lifestyle Changes</p>
+                <a href="https://www.maxhealthcare.in/blogs/diabetes-management-through-lifestyle-changes" target="_blank">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medication Section (Formatted like Foods Section) -->
+    <section id="medication">
+        <h2>Medication</h2>
+        <p>Medicines commonly prescribed for diabetes management.</p>
+        <div class="main-content">
+            <!-- Medication Items -->
+            <div class="column">
+                <img src="https://images.ctfassets.net/4w8qvp17lo47/6vXaH4Y5Gw6AMEmASwGkc6/e6ff962a82811e4d160cc2d5c0d8b3cb/metformin-antidiabetic-tablets-science-photo-library.jpg" alt="Metformin">
+                <p>Metformin</p>
+            </div>
+            <div class="column">
+                <img src="https://npcms.nowpatient.com/wp-content/uploads/2023/09/Image-06-09-2023-at-13.10.webp" alt="Insulin Therapy">
+                <p>Insulin Therapy</p>
+            </div>
+            <div class="column">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2020/8/VF/OM/ZR/93762891/glipizide-500x500.jpg" alt="Sulfonylureas">
+                <p>Sulfonylureas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Made by S10.</p>
+    </footer>
+</body>
+</html>

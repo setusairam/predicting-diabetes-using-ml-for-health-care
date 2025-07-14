@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='predictor.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Diabetes Prediction</h1>
+    </header>
+    <section>
+        <h2>Enter Your Health Details</h2>
+        <form action="{{ url_for('predict') }}" method="POST">
+            <label for="pregnancies- Count (integer)">Pregnancies:</label>
+            <input type="number" name="pregnancies" required><br>
+
+            <label for="glucose- mg/dL">Glucose:</label>
+            <input type="number" name="glucose" required><br>
+
+            <label for="bloodpressure- mm Hg">Blood Pressure:</label>
+            <input type="number" name="bloodpressure" required><br>
+
+            <label for="skinthickness- mm">Skin Thickness:</label>
+            <input type="number" name="skinthickness" required><br>
+
+            <label for="insulin- μU/mL">Insulin:</label>
+            <input type="number" name="insulin" required><br>
+
+            <label for="BMI -kg/m^2">BMI:</label>
+            <input type="number" step="0.1" name="bmi" required><br>
+
+            <label for="dpf - ">Diabetes Pedigree Function:</label>
+            <input type="number" step="0.01" name="dpf" required><br>
+
+            <label for="age- Years">Age:</label>
+            <input type="number" name="age" required><br>
+
+            <button type="submit">Predict</button>
+        </form>
+        
+        {% if prediction_text %}
+            <h3>Prediction Result: {{ prediction_text }}</h3>
+        {% endif %}
+    </section>
+</body>
+</html>
